@@ -62,13 +62,14 @@ public class Fibonacci {
 
 
 public static void main(String[] args) {
-    Scanner s = new Scanner(System.in);
-    int n =s.nextInt();
-    int [] dp = new int[n+1];
-    for(int i = 0; i<dp.length; i++){
-        dp[i] = -1;
+    try (Scanner s = new Scanner(System.in)) {
+        int n =s.nextInt();
+        int [] dp = new int[n+1];
+        for(int i = 0; i<dp.length; i++){
+            dp[i] = -1;
+        }
+        System.out.println(fibonacci(n));
+        System.out.println(fibonacciDP(n, dp));
     }
-    System.out.println(fibonacci(n));
-    System.out.println(fibonacciDP(n, dp));
 }
 }
